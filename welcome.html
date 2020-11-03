@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>A grouped pure CSS parallax demo by Keith Clark</title>
+    <meta name="description" content="Demonstration of grouping content in pure CSS parallax scrolling website">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/welcome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="preloader">
+        <button>Do a thing</button>
+        <div id="loading"><span>Hold up...</span></div>
+        <div id="toast"><span class="big">Nice.</span> <span class="info">You did a thing.</span> <a>Undo it here.</a>
+        </div>
+    </div>
+    <div class="debug">
+
+    </div>
+    <!-- <div class="demo__info">
+        Pure CSS parallax scroll demo #3 by Keith Clark. Please read the <a
+            href="https://keithclark.co.uk/articles/pure-css-parallax-websites/">blog post</a> for more information.
+    </div> -->
+
+    <div class="parallax">
+        <div id="group1" class="parallax__group">
+            <div class="parallax__layer parallax__layer--base">
+                <!-- <div class="title">Base Layer</div> -->
+                <div class="title">Welcome</div>
+                <span class="scroll-down">
+                    <i class="material-icons">keyboard_arrow_down</i>
+                </span>
+            </div>
+        </div>
+        <div id="group2" class="parallax__group">
+            <div class="parallax__layer parallax__layer--base">
+                <div class="title">
+                    Mariage
+                </div>
+            </div>
+            <div class="parallax__layer parallax__layer--back">
+                <!-- <div class="title">Background Layer</div> -->
+            </div>
+        </div>
+        <div id="group3" class="parallax__group">
+            <div class="parallax__layer parallax__layer--fore">
+                <div class="title">Foreground Layer</div>
+            </div>
+            <div class="parallax__layer parallax__layer--base">
+                <div class="title">Base Layer</div>
+            </div>
+        </div>
+        <div id="group4" class="parallax__group">
+            <div class="parallax__layer parallax__layer--base">
+                <div class="title">Base Layer</div>
+            </div>
+            <div class="parallax__layer parallax__layer--back">
+                <div class="title">Background Layer</div>
+            </div>
+            <div class="parallax__layer parallax__layer--deep">
+                <div class="title">Deep Background Layer</div>
+            </div>
+        </div>
+        <div id="group5" class="parallax__group">
+            <div class="parallax__layer parallax__layer--fore">
+                <div class="title">Foreground Layer</div>
+            </div>
+            <div class="parallax__layer parallax__layer--base">
+                <div class="title">Base Layer</div>
+            </div>
+        </div>
+        <div id="group6" class="parallax__group">
+            <div class="parallax__layer parallax__layer--back">
+                <div class="title">Background Layer</div>
+            </div>
+            <div class="parallax__layer parallax__layer--base">
+                <div class="title">Base Layer</div>
+            </div>
+        </div>
+        <div id="group7" class="parallax__group">
+            <div class="parallax__layer parallax__layer--base">
+                <!-- <div class="title">Base Layer</div> -->
+                <div class="title">
+                    <i class="material-icons">local_phone</i>
+                    <i class="material-icons">palette</i>
+                    <i class="material-icons">local_florist</i>
+                    <i class="material-icons">favorite</i>
+                </div>
+                <div class="foot-credits">
+                    <div>
+                        Copyright &copy; 2020 <a href="/">Chic Dame Makeup</a>
+                    </div>
+                    <div>
+                        Made with <i class="material-icons">favorite</i> by Amane Hosanna
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        //document.querySelector("button").addEventListener("click", function(){activateLoadAnim(false)}, false);
+        activateLoadAnim(false);
+
+        document.querySelector("a").addEventListener("click", function(){activateLoadAnim(true)}, false);
+
+        function activateLoadAnim(undo){ 
+            document.querySelector("#loading").classList.remove("animate");
+            document.querySelector("button").blur();
+            document.querySelector("#loading").classList.add("animate");
+            document.querySelector("#toast").classList.remove("popped");
+            
+            /*
+            setTimeout(stopAnim, 5000);
+                if(undo){
+                    document.querySelector("#toast .big").textContent = 'Alright.';
+                    document.querySelector("#toast .info").textContent = 'We undid that thing.';
+                    document.querySelector("#toast a").style.display = "none";
+                }
+                else{
+                    document.querySelector("#toast .big").textContent = 'Nice.';
+                    document.querySelector("#toast .info").textContent = 'You did a thing.';
+                    document.querySelector("#toast a").style.display = "inline";
+                }
+                */
+        } 
+
+        function stopAnim(){
+            document.querySelector("#loading").classList.remove("animate");
+            //document.querySelector("#toast").classList.add("popped");
+            //setTimeout(cleanup, 6000);
+        }
+
+        function cleanup(){
+            document.querySelector("#toast").classList.remove("popped");
+        }
+
+        $(document).ready(function(){
+            setTimeout(function(){
+
+                stopAnim();
+            }, 500)
+            
+        });
+    </script>
+
+</body>
+
+</html>

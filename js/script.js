@@ -2,6 +2,7 @@
 // show navbar on scroll
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
+    console.log("v");
     // var currentScrollPos = window.pageYOffset;
     if (window.pageYOffset < document.getElementById("header").style.height) {
         document.getElementById("navbar").style.top = "-50px";

@@ -1,5 +1,7 @@
 :root{
-    /*  */
+    /**/
+    /* --primary: #ff02ff; */
+    --primary: #fd0057;
 }
 
 html {
@@ -8,7 +10,7 @@ html {
 }
 
 body {
-
+    position: relative;
     font-family: 'Dancing Script',
     cursive;
     font-family: 'Lobster', cursive;
@@ -82,6 +84,17 @@ header .content{
     position: fixed;
     top: 0;
     z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+    color: white;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.nav-link{
+    display: inline-block;
+
 }
 
 
