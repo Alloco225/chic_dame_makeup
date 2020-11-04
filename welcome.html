@@ -11,7 +11,9 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/welcome.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="css/sparkle-btn.css">
 </head>
 
 <body>
@@ -21,23 +23,29 @@
         <div id="toast"><span class="big">Nice.</span> <span class="info">You did a thing.</span> <a>Undo it here.</a>
         </div>
     </div>
-    <div class="debug">
-
+    <div class="openNavbar menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
     <!-- <div class="demo__info">
         Pure CSS parallax scroll demo #3 by Keith Clark. Please read the <a
             href="https://keithclark.co.uk/articles/pure-css-parallax-websites/">blog post</a> for more information.
     </div> -->
 
-    <div class="parallax">
+    <main class="parallax">
         <div id="group1" class="parallax__group">
             <div class="parallax__layer parallax__layer--base">
                 <!-- <div class="title">Base Layer</div> -->
                 <div class="title">Welcome</div>
-                <span class="scroll-down">
+                <a href="#group2" class="scroll-down goto">
                     <i class="material-icons">keyboard_arrow_down</i>
-                </span>
+                </a>
             </div>
+            <div class="btn-wrapper">
+                <button type="button" class="btn">touch me</button>
+            </div>
+            <canvas id="canvas"></canvas>
         </div>
         <div id="group2" class="parallax__group">
             <div class="parallax__layer parallax__layer--base">
@@ -103,21 +111,62 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
+    <nav class="navbar">
+        <div>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="#group2" class="nav-link goto">
+                        Item
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#group3" class="nav-link goto">
+                        Item a
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#group4" class="nav-link goto">
+                        Item ipsum
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#group5" class="nav-link goto">
+                        Item lid
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#group6" class="nav-link goto">
+                        Item lid
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#group7" class="nav-link goto">
+                        Item lid
+                    </a>
+                </li>
+            </ul>
+            <div class="nav-footer">
+                Made with <i class="material-icons">favorite</i> <br>
+                by Amané Hosanna
+            </div>
+        </div>
+    </nav>
 
     <script>
-        
         //document.querySelector("button").addEventListener("click", function(){activateLoadAnim(false)}, false);
         activateLoadAnim(false);
 
-        document.querySelector("a").addEventListener("click", function(){activateLoadAnim(true)}, false);
+        document.querySelector("a").addEventListener("click", function () {
+            activateLoadAnim(true)
+        }, false);
 
-        function activateLoadAnim(undo){ 
+        function activateLoadAnim(undo) {
             document.querySelector("#loading").classList.remove("animate");
             document.querySelector("button").blur();
             document.querySelector("#loading").classList.add("animate");
             document.querySelector("#toast").classList.remove("popped");
-            
+
             /*
             setTimeout(stopAnim, 5000);
                 if(undo){
@@ -131,27 +180,60 @@
                     document.querySelector("#toast a").style.display = "inline";
                 }
                 */
-        } 
+        }
 
-        function stopAnim(){
+        function stopAnim() {
             document.querySelector("#loading").classList.remove("animate");
             //document.querySelector("#toast").classList.add("popped");
             //setTimeout(cleanup, 6000);
         }
 
-        function cleanup(){
+        function cleanup() {
             document.querySelector("#toast").classList.remove("popped");
         }
 
-        $(document).ready(function(){
-            setTimeout(function(){
-
+        $(document).ready(function () {
+            setTimeout(function () {
                 stopAnim();
-            }, 500)
+                setTimeout(function () {
+                    $(".menu-icon").css('opacity', 1);
+                }, 1000);
+            }, 1000);
+
+            $(".menu-icon").click(function () {
+                console.log(">>ready");
+                console.log($(".navbar").css("width") );
+                if ($(".navbar").css("width") == "0px") {
+                    //
+                    $(".navbar").css("width", "250px");
+                    $("main").css("margin-left", 250+'px');
+                    $(".menu-icon").css("left", "200px");
+                    $(".navbar div").css("display", "block");
+                } else{
+                    
+                    $(".navbar").css("width", "0px");
+                    $("main").css("margin-left", 0+'px');
+                    $(".menu-icon").css("left", "30px");
+                    $(".navbar div").css("display", "none");
+
+                }
+            });
+
+            // Scroll function
+            // $('[href*=#]').click(function(e) {
             
+            $('.goto').click(function(e) {
+                
+                e.preventDefault();
+                $btn = $(this);
+                document.querySelector($btn.attr('href')).scrollIntoView({
+                behavior: 'smooth'
+                });
+            });
         });
     </script>
 
+    <script src="js/sparkle-btn.js"></script>
 </body>
 
 </html>
