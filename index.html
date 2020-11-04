@@ -1,74 +1,244 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chic Dame Makeup</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Chic Dame Make up</title>
+    <meta name="description" content="Demonstration of grouping content in pure CSS parallax scrolling website">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/welcome.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/sparkle-btn.js"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,400;1,500;1,600&display=swap"
-        rel="stylesheet">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,300;1,400;1,700&display=swap"
-        rel="stylesheet">
-
-    <!-- Bootstrap -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-
+    <!-- <link rel="stylesheet" href="css/sparkle-btn.css"> -->
+    <!-- <link rel="stylesheet" href="css/hover-btn.css"> -->
 </head>
 
 <body>
-    <div id="navbar" class="navbar">
-        <a href="#home" class="nav-link">Acceuil</a>
-        <div>
-            <a href="#news" class="nav-link">News</a>
-            <a href="#contact" class="btn btn-primary">Appeler</a>
+    <div class="preloader">
+        <!-- <button>Do a thing</button> -->
+        <button></button>
+        <div id="loading"><span>Chargement...</span></div>
+        <div id="toast"><span class="big">Nice.</span> <span class="info">You did a thing.</span> <a>Undo it here.</a>
         </div>
     </div>
-    <div class="parallax">
-        <header id="header">
-            <div class="content">
-                <h1 class="title">
-                    Chic dame make up
-                </h1>
-                <p>
-                    Confiez vous aux mains qui sauront apporter un plus à votre beauté en vous donnant l’élégance qui vous
-                    démarquera parmi tant d’autre
-                </p>
-                <a href="" class="btn btn-primary">Appeler</a>
-            </div>
-        </header>
+    <div class="openNavbar menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
-    
-    <main>
+    <!-- <div class="demo__info">
+        Pure CSS parallax scroll demo #3 by Keith Clark. Please read the <a
+            href="https://keithclark.co.uk/articles/pure-css-parallax-websites/">blog post</a> for more information.
+    </div> -->
 
-
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ipsum magni vero a quasi iure dicta molestias officia totam. Explicabo odio reiciendis quam facilis dicta ut dolor? Alias, possimus eius. Dolorum esse maiores quod omnis officiis perspiciatis, soluta non tempora quas eveniet perferendis at nulla id ad quidem enim! Rerum ipsum debitis in accusamus inventore, velit officiis laboriosam. Praesentium at nulla voluptas adipisci assumenda molestias alias ipsam ab hic neque consequatur voluptatibus laborum ut modi, in velit expedita nostrum nisi quibusdam dolorum? Soluta, pariatur. Voluptates tenetur, libero sit nihil accusantium vel similique vero eligendi tempora hic quis! Officiis voluptates ea incidunt dicta exercitationem magni velit? Numquam facere eligendi sequi iste atque eos debitis magnam temporibus totam, dolore quisquam doloremque a natus cum perferendis provident voluptatum voluptatibus tenetur doloribus magni fugit eius! Maxime deleniti officia dolor magnam commodi iste dolores. Itaque, dolor magnam. Commodi illum velit distinctio sed fugiat deserunt dolores quo reprehenderit asperiores mollitia repudiandae id soluta tenetur rerum dolore, minima unde explicabo quidem aspernatur eius necessitatibus? A voluptatum dolorum ipsam corrupti. Perferendis voluptatem quibusdam facere cum alias hic cupiditate! Nulla unde quae ipsam similique itaque aliquam debitis. Rem laborum, dignissimos consequuntur eos suscipit ratione! Vel, ducimus. Consequatur fuga sit quod nobis distinctio corrupti eveniet voluptatem sint iure modi dolorum necessitatibus accusantium, laudantium voluptatum nostrum tempora nemo fugit reprehenderit cumque voluptas officia quam inventore? Praesentium perferendis provident enim dolores, incidunt itaque deleniti doloremque voluptatibus magnam quidem voluptatum vero, voluptates ipsum eligendi totam debitis nobis accusantium esse est distinctio! Assumenda numquam, debitis temporibus pariatur expedita excepturi accusantium fuga molestias. Accusantium nihil eligendi quod, nulla fuga ex, aperiam fugit distinctio cum recusandae accusamus. Impedit totam a sapiente, quae molestiae eveniet cupiditate mollitia consequuntur animi repellendus nobis? Quidem quasi impedit consequuntur nisi, illum dolor animi? Alias asperiores odit eveniet natus officia vero aspernatur quos perferendis veritatis ullam exercitationem nobis, ex repellat aut recusandae veniam? Amet sed deserunt accusamus fuga, commodi necessitatibus minus hic. Asperiores aliquam nihil exercitationem ipsam suscipit! Dolores voluptate ullam numquam voluptatem vero quidem dolor maxime odit porro, enim illo quod nostrum iste consectetur velit fuga delectus facilis quasi architecto unde optio placeat distinctio. Assumenda similique et dolor dolorum architecto laborum nostrum eum, voluptates, corrupti, consequatur inventore ab quasi. Sunt, obcaecati eos, maxime natus quod animi perspiciatis suscipit deserunt soluta ut nesciunt facere, impedit dolores magni accusamus odio neque reiciendis ipsum perferendis asperiores eaque nobis nisi deleniti minus? Sint, nam iure omnis labore qui a repudiandae adipisci aspernatur eaque id accusamus, esse pariatur ex repellat eos vel sunt itaque earum distinctio aut hic repellendus! Quod illo, dignissimos, perferendis ea nisi accusantium eos eaque molestiae, ipsam minima ab repellendus! Distinctio placeat blanditiis aliquid minima reprehenderit ducimus eum laborum consequatur cum rem excepturi odio odit mollitia, sunt voluptatem minus error nesciunt eaque, non, maiores autem esse? Omnis incidunt voluptates reiciendis facere, totam quasi accusamus maiores, doloribus voluptatum repellendus praesentium itaque autem vero, dolore perspiciatis quis est non nulla voluptas asperiores iusto. Nisi, aliquam a ipsum voluptates dicta inventore culpa natus ducimus aliquid consequatur suscipit adipisci debitis recusandae assumenda! Minima, natus. Impedit reprehenderit iure, necessitatibus voluptates deleniti dolore quos, ipsa id nostrum quibusdam nesciunt laboriosam ipsum provident reiciendis porro nisi! Eveniet asperiores molestias delectus soluta rerum, sequi repellendus quasi consequatur, sed magni qui vero. Sint accusamus placeat suscipit nesciunt labore hic libero laborum, mollitia voluptates. Obcaecati veniam iste corporis quidem quasi odit ex hic placeat autem, accusantium veritatis ad cupiditate eius omnis ullam illum. Vel cupiditate officia iste mollitia rerum? Optio voluptatem laborum numquam. Iste quisquam aperiam, ipsum molestias enim sit deleniti numquam repellat neque doloribus, illum facere? Doloribus ut sed ratione expedita eaque. Porro nemo ipsum velit magnam sequi voluptatem quo quia error eaque aperiam magni numquam sapiente corrupti, veniam cumque ullam accusamus quaerat obcaecati! Accusantium veritatis consequuntur cumque perspiciatis minima. Placeat officia praesentium incidunt quae reprehenderit numquam, laborum ad iste, mollitia doloribus magnam, autem corrupti repellendus voluptatibus repellat illum voluptate vel architecto dolore non aut nobis officiis. Laudantium expedita consequatur ullam necessitatibus voluptatum praesentium velit unde repudiandae aliquam porro odit voluptatem officia quaerat, culpa doloremque, eveniet perferendis, voluptate saepe sed aut repellendus quidem nemo et! Voluptate molestiae, distinctio quo et sapiente cupiditate sunt earum. Quaerat recusandae facilis aliquid illum voluptate, asperiores incidunt porro quas! Fugit error eius hic asperiores non velit vitae eligendi sint quidem amet, odit blanditiis ipsum adipisci deserunt nobis commodi. Magni dicta consectetur corrupti itaque unde, expedita minus ratione neque? Excepturi dolorum quaerat reprehenderit labore maiores fuga laboriosam officiis, vero cumque rem culpa nostrum voluptatem a quia corporis quibusdam nesciunt sapiente? Quidem aliquid obcaecati mollitia perspiciatis autem explicabo nesciunt nulla iste veniam voluptates placeat eius beatae accusamus quae, pariatur ratione, architecto ipsam eaque minima iusto laudantium amet consectetur labore consequuntur. Molestias reprehenderit eveniet aperiam necessitatibus commodi harum perspiciatis in pariatur atque minima impedit, fugiat, nam nesciunt, sapiente quod perferendis?
+    <main class="parallax">
+        <div id="group1" class="parallax__group">
+            <div class="parallax__layer parallax__layer--base">
+                <!-- <div class="title">Base Layer</div> -->
+                <div class="title">Welcome</div>
+                <a href="#group2" class="scroll-down goto">
+                    <i class="material-icons">keyboard_arrow_down</i>
+                </a>
+            </div>
+            <div class="btn-wrapper">
+                <button type="button" class="btn-12">touch me</button>
+            </div>
+            <canvas id="canvas"></canvas>
+        </div>
+        <div id="group2" class="parallax__group">
+            <div class="parallax__layer parallax__layer--base">
+                <div class="title">
+                    Mariage
+                </div>
+            </div>
+            <div class="parallax__layer parallax__layer--back">
+                <!-- <div class="title">Background Layer</div> -->
+            </div>
+        </div>
+        <div id="group3" class="parallax__group">
+            <div class="parallax__layer parallax__layer--fore">
+                <div class="title">Foreground Layer</div>
+            </div>
+            <div class="parallax__layer parallax__layer--base">
+                <div class="title">Base Layer</div>
+            </div>
+        </div>
+        <div id="group4" class="parallax__group">
+            <div class="parallax__layer parallax__layer--base">
+                <div class="title">Base Layer</div>
+            </div>
+            <div class="parallax__layer parallax__layer--back">
+                <div class="title">Background Layer</div>
+            </div>
+            <div class="parallax__layer parallax__layer--deep">
+                <div class="title">Deep Background Layer</div>
+            </div>
+        </div>
+        <div id="group5" class="parallax__group">
+            <div class="parallax__layer parallax__layer--fore">
+                <div class="title">Foreground Layer</div>
+            </div>
+            <div class="parallax__layer parallax__layer--base">
+                <div class="title">Base Layer</div>
+            </div>
+        </div>
+        <div id="group6" class="parallax__group">
+            <div class="parallax__layer parallax__layer--back">
+                <div class="title">Background Layer</div>
+            </div>
+            <div class="parallax__layer parallax__layer--base">
+                <div class="title">Base Layer</div>
+            </div>
+        </div>
+        <div id="group7" class="parallax__group">
+            <div class="parallax__layer parallax__layer--base">
+                <!-- <div class="title">Base Layer</div> -->
+                <div class="title">
+                    <i class="material-icons">local_phone</i>
+                    <i class="material-icons">palette</i>
+                    <i class="material-icons">local_florist</i>
+                    <i class="material-icons">favorite</i>
+                </div>
+                <div class="foot-credits">
+                    <div>
+                        Copyright &copy; 2020 <a href="/">Chic Dame Makeup</a>
+                    </div>
+                    <div>
+                        Made with <i class="material-icons">favorite</i> by Amane Hosanna
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
+    <nav class="navbar">
+        <div>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="#group2" class="nav-link goto">
+                        Item
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#group3" class="nav-link goto btn-12">
+                        Item a
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#group4" class="nav-link goto">
+                        Item ipsum
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#group5" class="nav-link goto">
+                        Item lid
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#group6" class="nav-link goto">
+                        Item lid
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#group7" class="nav-link goto">
+                        Item lid
+                    </a>
+                </li>
+            </ul>
+            <div class="nav-footer">
+                Made with <i class="material-icons">favorite</i> <br>
+                by Amané Hosanna
+            </div>
+        </div>
+    </nav>
 
-    <script src="js/script.js"></script>
+    <script>
+        //document.querySelector("button").addEventListener("click", function(){activateLoadAnim(false)}, false);
+        activateLoadAnim(false);
+
+        document.querySelector("a").addEventListener("click", function () {
+            activateLoadAnim(true)
+        }, false);
+
+        function activateLoadAnim(undo) {
+            document.querySelector("#loading").classList.remove("animate");
+            document.querySelector("button").blur();
+            document.querySelector("#loading").classList.add("animate");
+            document.querySelector("#toast").classList.remove("popped");
+
+            /*
+            setTimeout(stopAnim, 5000);
+                if(undo){
+                    document.querySelector("#toast .big").textContent = 'Alright.';
+                    document.querySelector("#toast .info").textContent = 'We undid that thing.';
+                    document.querySelector("#toast a").style.display = "none";
+                }
+                else{
+                    document.querySelector("#toast .big").textContent = 'Nice.';
+                    document.querySelector("#toast .info").textContent = 'You did a thing.';
+                    document.querySelector("#toast a").style.display = "inline";
+                }
+                */
+        }
+
+        function stopAnim() {
+            document.querySelector("#loading").classList.remove("animate");
+            //document.querySelector("#toast").classList.add("popped");
+            //setTimeout(cleanup, 6000);
+        }
+
+        function cleanup() {
+            document.querySelector("#toast").classList.remove("popped");
+        }
+
+        $(document).ready(function () {
+            setTimeout(function () {
+                stopAnim();
+                setTimeout(function () {
+                    $(".menu-icon").css('opacity', 1);
+                }, 1000);
+            }, 1000);
+
+            $(".menu-icon").click(function () {
+                console.log(">>ready");
+                console.log($(".navbar").css("width"));
+                if ($(".navbar").css("width") == "0px") {
+                    //
+                    $(".navbar").css("width", "250px");
+                    $("main").css("margin-left", 250 + 'px');
+                    $(".menu-icon").css("left", "200px");
+                    $(".navbar div").css("display", "block");
+                } else {
+
+                    $(".navbar").css("width", "0px");
+                    $("main").css("margin-left", 0 + 'px');
+                    $(".menu-icon").css("left", "30px");
+                    $(".navbar div").css("display", "none");
+
+                }
+            });
+
+            // Scroll function
+            // $('[href*=#]').click(function(e) {
+
+            $('.goto').click(function (e) {
+
+                e.preventDefault();
+                $btn = $(this);
+                document.querySelector($btn.attr('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>
