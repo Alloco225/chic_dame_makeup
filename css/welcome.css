@@ -1,5 +1,7 @@
 :root{
     --primary: #fd0057;
+    --blue: #0da1b1;
+    /* --green: ; */
 }
 
 body{
@@ -333,7 +335,7 @@ body{
     #services .parallax__layer--base {
         /* background: rgb(153, 216, 101); */
         background: rgb(153, 216, 101);
-        background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .4)),
+        background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .7)),
         url('../images/bg3.jpg');
     }
 
@@ -362,6 +364,14 @@ body{
         overflow: hidden;
         border-radius: 5px;
     }
+
+    /* .container .box:first-child{
+        margin-top: 50px;
+    }
+    .container .box:last-child{
+        margin-top: 100px;
+    } */
+
     .container .box .imgBx{
         position: absolute;
         top: 0;
@@ -403,10 +413,11 @@ body{
     }
     .container .box .layer.layer2 {
         background:#90ff00;
-        transform: translateY(170%);
+        height: 170%;
+        transform: translateY(200%);
     }
     .container .box:hover .layer.layer2 {
-        transform: translateY(-170%);
+        transform: translateY(-200%);
     }
     .container .box .contentBx {
         position: absolute;
@@ -414,7 +425,8 @@ body{
         left: 0;
         width: 100%;
         height: 100%;
-        background: #111;
+        /* background: #794e33; */
+        background: var(--primary);
         color: #fff;
         transition: 1.3s ease-in-out;
         transform: translateY(300%);
