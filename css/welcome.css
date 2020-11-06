@@ -1,6 +1,7 @@
 :root{
     --primary: #fd0057;
     --blue: #0da1b1;
+    --red: #df2321;
     /* --green: ; */
 }
 
@@ -277,7 +278,7 @@ body{
 
     #group1 .parallax__layer--base {
         
-        background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('../images/bg.jpg');
+        background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('../images/bg.jpg');
     }
 
     .scroll-down {
@@ -335,7 +336,7 @@ body{
     #services .parallax__layer--base {
         /* background: rgb(153, 216, 101); */
         background: rgb(153, 216, 101);
-        background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .7)),
+        background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .75)),
         url('../images/bg3.jpg');
     }
 
@@ -590,7 +591,7 @@ body{
 
 WARNING: Note it's not prefixed! You might want to check the compiled version! */
 
-    #loading span {
+    /* #loading span {
         position: absolute;
         z-index: 99;
         left: 50%;
@@ -600,7 +601,174 @@ WARNING: Note it's not prefixed! You might want to check the compiled version! *
         font-weight: bold;
         text-transform: uppercase;
         font-size: 7vw;
+    } */
+    #loading-icon {
+        position: absolute;
+        z-index: 999;
+        left: 50%;
+        top: 50%;
+        width: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 7vw;
+        overflow: visible;
     }
+    
+    #lips-top {
+        /* animation: lipstick-color 1s ease-in-out 2s 5 ; */
+        transition: .3s ease-in;
+        /* fill: var(--red); */
+        fill: #fff;
+    }
+    #lips-bottom,
+    .lipstick-color {
+        transition: .3s ease-in;
+        /* fill: var(--primary); */
+        fill: #fff;
+    }
+    #star-small, #star-big{
+        opacity: 0;
+        fill: yellow;
+        /* animation-duration:  1s;
+        animation-timing-function: ease;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation: name duration timing-function delay iteration-count direction fill-mode; */
+        transition: .3s ease-in-out;
+        transform-origin: center !important;
+    }
+    #star-small{
+        transform: translate(20%, -80%);
+        
+    }
+    #star-big{
+        /* animation-delay: 1s; */
+        transform: translate(25%, -25%);
+        left: 25%;
+        top: -25%;
+    }
+    
+    #lipstick-whole {
+        /* transform: translateY(-25%); */
+        /* transition: 1.5s ease-in-out; */
+        /* animation: lipstick-upper ease-in-out 1s 3; */
+        /* transform-origin: bottom -20px; */
+    }
+    .lipstick-color{
+        /* fill: var(--red); */
+        /* animation: lipstick-color ease-out 1.5s 5; */
+        animation-delay: 1.4s;
+    }
+    @keyframes lipstick-color{
+        to {
+            fill: var(--primary);
+            /* fill: #000; */
+        }
+        /* to {
+            fill: var(--red);
+        } */
+    }
+    @keyframes colorize-upper{
+        from {
+            fill: white
+        }
+        to {
+            fill: var(--red);
+        }
+    }
+    @keyframes twinkle {
+        from {
+            /* display: none; */
+            opacity: 0;
+            width: 5px;
+            height: 5px;
+            
+        }
+        to {
+            /* display: block;  */
+            opacity: 1;
+            width: 50px;
+            height: 50px;
+        }
+    }
+    @keyframes shrink {
+        from {
+            
+            width: 0px;
+            height: 0px;
+            
+        }
+        to {
+            
+            width: 50px;
+            height: 50px;
+        }
+    }
+    @keyframes colorize-lower{
+        from {
+            fill: white
+        }
+        to {
+            fill: var(--primary);
+        }
+    }
+    @keyframes lipstick-upper {
+        0% {
+            transform:
+            translateY(-20%);
+        }
+        
+        100% {
+            transform:
+            translate(50%, -20%);
+        }
+        
+    }
+    @keyframes lipstick-lower {
+        0% {
+            transform: translateX(0%);
+        }
+        
+        100% {
+            transform:
+            translateX(50%);
+        }
+    }
+    @keyframes lipstick {
+        0% {
+            transform:
+            translateY(-20%);
+        }
+        
+        25% {
+            transform:
+            translate(50%, -20%);
+        }
+        50% {
+            transform:
+            translate(0);
+        }
+        75% {
+            transform:
+                translate(50%, 0%);
+        }
+
+        100% {
+            /* transform: rotate(-3deg) */
+        }
+    }
+    @keyframes swing{
+        from {
+            transform:
+            translate(50%, -30%);
+        }
+        to {
+            transform: rotate(-3deg)
+        }
+    }
+    /* Animation */
 
     #loading {
         position: fixed;
@@ -622,8 +790,9 @@ WARNING: Note it's not prefixed! You might want to check the compiled version! *
         right: 0;
         top: 0;
         bottom: 0;
-        /* background: #FF4; */
-        background: var(--primary);
+        background: rgb(255, 121, 68);
+        /* background: var(--primary); */
+        /* background: var(--primary); */
         z-index: 20;
         transform: translate(0, 100%);
         animation: grow-up 4s infinite;
