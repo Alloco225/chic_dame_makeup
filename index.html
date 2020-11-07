@@ -265,7 +265,10 @@
                         Copyright &copy; 2020 <a href="/">Chic Dame Makeup</a>
                     </div>
                     <div class="credits">
-                        Made with <i class="material-icons">favorite</i> by Amane Hosanna
+                        Made with <i class="material-icons">favorite</i> by 
+                        <span class="nav-link">
+                            Amane Hosanna
+                        </span>
                     </div>
                 </div>
             </div>
@@ -440,23 +443,27 @@
 
             // Sidebar menu
             $(".menu-icon").click(function () {
-                if ($(".navbar").css("width") == "0px") {
+                toggleNavbar();
+            });
+
+            function toggleNavbar(){
+                if ($(".navbar").css("left") == "-250px") {
                     //
-                    $(".navbar").css("width", "250px");
+                    $(".navbar").css("left", "0px");
+                    //$(".navbar").css("width", 250+"px");
                     $("main").css("margin-left", 250 + 'px');
                     $(".menu-icon").css("left", "200px");
-                    setTimeout(function () {
-
-                        $(".navbar div").css("opacity", 1);
-                    }, 300);
+                    $(".menu-icon").toggleClass("close");
+                    
                 } else {
 
-                    $(".navbar").css("width", "0px");
+                    $(".navbar").css("left", "-250px");
+                    //$(".navbar").css("width", "0");
                     $("main").css("margin-left", 0 + 'px');
                     $(".menu-icon").css("left", "30px");
-                    $(".navbar div").css("opacity", 0);
+                    $(".navbar div").css("animation", "translate .3s ease-in-out .5s 1 reverse");
                 }
-            });
+            }
 
             // Smooth croll function
             // $('[href*=#]').click(function(e) {
@@ -464,7 +471,8 @@
                 e.preventDefault();
                 var t = 200;
                 if ($(".navbar").css("width") != "0px") {
-                    $(".menu-icon").click();
+                   // $(".menu-icon").click();
+                    toggleNavbar();
                     t = 500
                 }
                 $btn = $(this);

@@ -187,18 +187,31 @@ body{
     }
     .navbar{
         position: absolute;
-        left: 0;
+        /* left: 0; */
+        left: -250px;
         top: 0;
-        width: 0px;
+        /* width: 0px; */
+        width: 250px;
         height: 100%;
         background: var(--primary);
         text-align: center;
         transition: .3s ease-in-out;
     }
-    .navbar div{
-        opacity: 0;
-        transition: .3s ease-in-out;
-    }
+    
+    /* .navbar div{
+        
+        
+    } */
+    /* @keyframes translate {
+        from {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    } */
     .navbar .nav {
         position: absolute;
         left: 50%;
@@ -619,11 +632,14 @@ WARNING: Note it's not prefixed! You might want to check the compiled version! *
     #lips-top {
         /* animation: lipstick-color 1s ease-in-out 2s 5 ; */
         transition: .3s ease-in;
+        transform-origin: right center;
         /* fill: var(--red); */
         fill: #fff;
     }
     #lips-bottom,
     .lipstick-color {
+        transform-origin: right center;
+
         transition: .3s ease-in;
         /* fill: var(--primary); */
         fill: #fff;
@@ -834,8 +850,11 @@ WARNING: Note it's not prefixed! You might want to check the compiled version! *
         display: flex;
         width: 100%;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     .foot-credits div{
         padding: 20px;
+        margin: 0 auto;
+        text-align: center;
     }
