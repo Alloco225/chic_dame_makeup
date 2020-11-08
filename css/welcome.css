@@ -709,6 +709,38 @@ WARNING: Note it's not prefixed! You might want to check the compiled version! *
             height: 50px;
         }
     }
+    /* animation: glitter 2s linear 0s infinite normal;
+    -webkit-animation: glitter 2s linear 0s infinite normal;
+    -moz-animation: glitter 2s linear 0s infinite normal;
+    -ms-animation: glitter 2s linear 0s infinite normal;
+    -o-animation: glitter 2s linear 0s infinite normal; */
+
+    @keyframes glitter {
+        0% {
+            -webkit-transform: scale(1.0);
+            opacity: 1;
+        }
+
+        25% {
+            -webkit-transform: scale(0.5);
+            opacity: 0;
+        }
+
+        50% {
+            -webkit-transform: scale(1.0);
+            opacity: 1;
+        }
+
+        75% {
+            -webkit-transform: scale(0.5);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: scale(1.0);
+            opacity: 1;
+        }
+    }
     @keyframes shrink {
         from {
             

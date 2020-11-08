@@ -24,6 +24,12 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
          integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
          crossorigin="anonymous"></script>
+
+        <style>
+            main, .scroll-down{
+                opacity: 0;
+            }
+        </style>
 </head>
 
 <body>
@@ -432,11 +438,15 @@
 
         $(document).ready(function () {
             setTimeout(function () {
+                $("main").css("opacity", 1);
                 stopAnim();
                 setTimeout(function () {
                     $(".menu-icon").css('opacity', 1);
                 }, 1000);
-            }, 3000);
+                setTimeout(function () {
+                    $(".scroll-down").css('opacity', 1);
+                }, 2000);
+            }, 5000);
 
             $(".menu-icon").click();
 
