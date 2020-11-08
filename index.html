@@ -250,7 +250,7 @@
         </div>
         <div id="testimonies" class="parallax__group">
             <div class="parallax__layer parallax__layer--fore">
-                <div class="title">Temoignages</div>
+                <div class="title top-title">Temoignages</div>
             </div>
             <div class="parallax__layer parallax__layer--base">
                 <div class="title">Base Layer</div>
@@ -513,18 +513,21 @@
             $('.goto').click(function (e) {
                 e.preventDefault();
                 var t = 200;
-                if ($(".navbar").css("left") != "-250px") {
-                    // $(".menu-icon").click();
-                    toggleNavbar();
-
-                    t = 500
-                }
                 $btn = $(this);
-                setTimeout(function () {
-                    document.querySelector($btn.attr('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }, t);
+                setTimeout(function(){
+                    if ($(".navbar").css("left") != "-250px") {
+                        // $(".menu-icon").click();
+                        toggleNavbar();
+    
+                        t = 500
+                    }
+                    
+                    setTimeout(function () {
+                        document.querySelector($btn.attr('href')).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }, t);
+                }, 400);
             });
 
             // Carousel

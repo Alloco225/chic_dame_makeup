@@ -1,29 +1,25 @@
-//Ripple Event Handler
-var drawRipple = function(ev) {
-  var x = ev.clientX;
-  var y = ev.clientY;
-  var node = document.querySelector(".ripple");
-  var newNode = node.cloneNode(true);
-  newNode.classList.add("animate");
-  newNode.style.left = ev.clientX - 5 + "px";
-  newNode.style.top = ev.clientY - 5 + "px";
-  node.parentNode.replaceChild(newNode, node);
-};
+function createRipple(event) {
+    const button = event.currentTarget;
 
-//Ripple Triggers
-window.addEventListener("click", drawRipple);
+    const circle = document.createElement("span");
+    const diameter = Math.max(button.clientWidth, button.clientHeight);
+    const radius = diameter / 2;
 
+    circle.style.width = circle.style.height = `${diameter}px`;
+    circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+    circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+    circle.classList.add("ripple");
 
-//Control Handler
-// var controlHandler = function() {
-//   document.body.classList.toggle("dark");
-//   if (document.body.classList.contains("dark")) {
-//     controller.textContent = "Dark Ripple";
-//   } else {
-//     controller.textContent = "Bright Ripple";
-//   }
-// };
+    const ripple = button.getElementsByClassName("ripple")[0];
 
-// Control Trigger
-// var controller = document.querySelector(".controller");
-// controller.addEventListener("click", controlHandler);
+    if (ripple) {
+        ripple.remove();
+    }
+
+    button.appendChild(circle);
+}
+
+const buttons = document.getElementsByTagName("button");
+for (const button of buttons) {
+    button.addEventListener("click", createRipple);
+}
