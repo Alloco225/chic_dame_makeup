@@ -2,7 +2,7 @@
     --primary: #fd0057;
     --blue: #0da1b1;
     --red: #df2321;
-    /* --green: ; */
+    --green: #338033;
 }
 
 body {
@@ -1129,4 +1129,136 @@ body {
     bottom: 1rem;
     right: 1rem;
     font-size: 0.9em;
+}
+
+/* ---- Testimonies carousel */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    /* background: rgba(23, 162, 184, 0.3); */
+    background: var(--primary);
+}
+
+#testimonies .wrapper{
+    position: absolute;
+    left: 50%;
+    bottom: 35%;
+    transform: translate(-50%, 35%);
+}
+
+.wrapper {
+    /* min-width: 900px; */
+    /* max-width: 1200px; */
+    width: 100%;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+@media screen and (min-width:780px){
+    .wrapper{
+        width: 80%;
+    }
+}
+
+.wrapper .box {
+    background: #fff;
+    width: calc(33% - 10px);
+    padding: 25px;
+    border-radius: 3px;
+    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.wrapper .box:nth-child(2) {
+    z-index: 3;
+    transform: scale(1.18);
+}
+.wrapper .box:hover {
+    z-index: 5;
+    transform: scale(1.2);
+}
+
+.wrapper .box p{
+    color: #282828;
+    font-weight: 500;
+}
+
+.wrapper .box i.quote {
+    /* font-size: 20px; */
+    /* color: #17a2b8; */
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.wrapper .box .content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.box .info .name {
+    font-weight: 700;
+    color: var(--primary);
+    /* font-size: 17px; */
+    font-size: 1.5rem;
+}
+
+.box .info .job {
+    font-size: 16px;
+    font-weight: 500;
+    /* color: #17a2b8; */
+    color: var(--blue);
+    /* color: var(--green); */
+}
+
+.box .info .stars {
+    margin-top: 2px;
+}
+
+.box .info .stars i {
+    /* color: #17a2b8; */
+    color: var(--primary);
+}
+
+.box .content .image {
+    height: 75px;
+    width: 75px;
+    padding: 3px;
+    background: #17a2b8;
+    border-radius: 50%;
+}
+
+.content .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.box:hover .content .image img {
+    border-color: #fff;
+}
+
+@media (max-width: 1045px) {
+    .wrapper .box {
+        width: calc(50% - 10px);
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 702px) {
+    .wrapper .box {
+        width: 100%;
+    }
 }
