@@ -1038,14 +1038,14 @@ body {
     padding-top: 10px;
 }
 
-.box:hover {
+.box-hover {
     cursor: pointer;
     z-index: 5;
     transform: scale(1.2);
 }
-.box:nth-child(2):hover{
+/* .box:nth-child(2):hover{
     transform: scale(1.2);
-}
+} */
 
 .box .info .name {
     font-weight: 700;
@@ -1119,7 +1119,7 @@ body {
 
 .bubble:before{
     position: absolute;
-    background-color: #D4D37F;
+    background-color: #fff;
     background-image: url('https://adjemin.com/img/smartlivraison.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -1137,7 +1137,8 @@ body {
 }
 
 
-.bubble:hover::before,
+/* .bubble:hover::before, */
+
 .bubble-mouseenter::before {
     /* position: absolute; */
     width: 950px;
@@ -1146,17 +1147,47 @@ body {
     z-index: 3;
     transition: all .3s ease-in-out;
 
-}
+} 
 /* .bubble-mouseenter::before{
     width: 500px !important;
     height: 300px !important;
     bottom: -50px !important;
     left: -90px !important;
-} */
-.bubble-resize::before{
-    width: 500px !important;
-    height: 300px !important;
-    bottom: -50px !important;
-    left: -90px !important;
-    border-radius: 0 !important;
+} */ 
+.bubble-resize::before{ 
+    width: 500px;
+    height: 300px; 
+    bottom: -50px; 
+    left: -90px; 
+    border-radius: 0; 
+    animation: resize 10s ease-out .3s 3 alternate,
+    zoom 10s ease-out 10s 3 alternate;
+    transition: all .3s ease-in;
+}
+
+@keyframes resize{
+    0%{
+        background-position: center;
+    }
+    25%{
+        background-position: bottom center;
+    }
+    50%{
+        background-position: top center;
+    }
+    100%{
+        background-position: top bottom;
+    }
+}
+@keyframes zoom{
+    0%{
+        /* background-position: center; */
+        width: 500px;
+        height: 300px;
+    }
+    100%{
+        width: 600px;
+        height: 400px;
+        /* background-position: top bottom; */
+    }
 }

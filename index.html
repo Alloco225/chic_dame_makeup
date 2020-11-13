@@ -536,7 +536,15 @@
             });
 
             // hover makeup after
-
+            $(".wrapper .box").hover(function(){
+                $(this).toggleClass("box-hover");
+            });
+            //$(".wrapper .box").mouseenter(function(){
+            //    $(this).addClass("box-hover");
+            //});
+            //$(".wrapper .box").click(function(){
+            //    $(this).removeClass("box-hover");
+            //});
             $(".bubble").mouseenter(function(){
                 $(this).addClass("bubble-mouseenter");
                 //setTimeout(()=>{
@@ -547,7 +555,8 @@
                 }, 450);
             });
             
-            $(".bubble").mouseleave(function(){
+            //$(".bubble").mouseleave(function(){
+            $(".bubble").click(function(){
                 $(this).removeClass("bubble-resize");
                 //setTimeout(()=>{
                 //    $(this).removeClass("bubble-resize");
