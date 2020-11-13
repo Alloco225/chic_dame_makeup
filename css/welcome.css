@@ -1043,6 +1043,7 @@ body {
     z-index: 5;
     transform: scale(1.2);
 }
+.box-hover,
 .box:nth-child(2):hover{
     transform: scale(1.2);
     z-index: 10;
