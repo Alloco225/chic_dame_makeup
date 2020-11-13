@@ -269,7 +269,7 @@
                                 </div>
                             </div>
                             <div class="image bubble bubble1">
-                                <img src="images/bg.jpg" alt="">
+                                <img src="images/bg_bubble1.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -291,7 +291,7 @@
                                 </div>
                             </div>
                             <div class="image bubble bubble2">
-                                <img src="images/bg2.jpg" alt="">
+                                <img src="images/bg_bubble2.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -313,7 +313,7 @@
                                 </div>
                             </div>
                             <div class="image bubble bubble3">
-                                <img src="images/bg3.jpg" alt="">
+                                <img src="images/bg_bubble3.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -534,6 +534,29 @@
             $(".menu-icon").click(function () {
                 toggleNavbar();
             });
+
+            // hover makeup after
+
+            $(".bubble").mouseenter(function(){
+                $(this).addClass("bubble-mouseenter");
+                //setTimeout(()=>{
+                  //  $(this).addClass("bubble-resize");
+                //}, 300);
+                setTimeout(()=>{
+                    $(this).addClass("bubble-resize");
+                }, 450);
+            });
+            
+            $(".bubble").mouseleave(function(){
+                $(this).removeClass("bubble-resize");
+                //setTimeout(()=>{
+                //    $(this).removeClass("bubble-resize");
+                //}, 300);
+                setTimeout(()=>{
+                    $(this).removeClass("bubble-mouseenter");
+                }, 450);
+            });
+            
 
             function toggleNavbar() {
                 $(".menu-icon").toggleClass("menu-active");

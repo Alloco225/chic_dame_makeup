@@ -1014,8 +1014,8 @@ body {
     border-radius: 3px;
     
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
     transition: transform .4s ease-in-out;
+    /* overflow: hidden; */
 }
 
 .wrapper .box p{
@@ -1104,41 +1104,59 @@ body {
         width: 100%;
     }
 }
-
+.wrapper .box {
+    overflow: hidden;
+}
 .bubble.bubble1:before{
-    background-image: url('../images/bg.jpg') !important;
+    background-image: url('../images/bg_bubble1_after.jpg') !important;
 }
 .bubble.bubble2:before{
-    background-image: url('../images/bg2.jpg') !important;
+    background-image: url('../images/bg_bubble2_after.jpg') !important;
 }
 .bubble.bubble3:before{
-    background-image: url('../images/bg3.jpg') !important;
+    background-image: url('../images/bg_bubble3_after.jpg') !important;
 }
 
-.bubble:before {
+.bubble:before{
     position: absolute;
     background-color: #D4D37F;
     background-image: url('https://adjemin.com/img/smartlivraison.png');
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
     background-size: cover;
-    /*   opacity:0.5;  */
+      /* opacity:0.4;  */
     content: '';
     width: 0rem;
     height: 0rem;
     left: 50%;
     bottom: 50%;
     transform: translate(-50%);
-    border-radius: 50%;
+    border-radius: 500%;
     transition: all .5s ease-in-out;
-    z-index: -1;
+    z-index: 3;
 }
 
-.bubble:hover::before {
-    position: absolute;
+
+.bubble:hover::before,
+.bubble-mouseenter::before {
+    /* position: absolute; */
     width: 950px;
     height: 950px;
-
     bottom: -227.5px;
     z-index: 3;
+    transition: all .3s ease-in-out;
+
+}
+/* .bubble-mouseenter::before{
+    width: 500px !important;
+    height: 300px !important;
+    bottom: -50px !important;
+    left: -90px !important;
+} */
+.bubble-resize::before{
+    width: 500px !important;
+    height: 300px !important;
+    bottom: -50px !important;
+    left: -90px !important;
+    border-radius: 0 !important;
 }
