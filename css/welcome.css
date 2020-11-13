@@ -142,17 +142,20 @@ a {
     transition: 0.4s;
 }
 
-.menu-icon:hover span {
-    animation: elastic .3s ease-in-out .2s infinite alternate;
-}
+@media screen and (min-width: 768px){
 
-.menu-icon:hover span:first-child {
-    animation: elastic .5s ease-in-out .5s infinite alternate;
-
-}
-
-.menu-icon:hover span:last-child {
-    animation: elastic .2s ease-in-out .3s infinite alternate;
+    .menu-icon:hover span {
+        animation: elastic .3s ease-in-out .2s infinite alternate;
+    }
+    
+    .menu-icon:hover span:first-child {
+        animation: elastic .5s ease-in-out .5s infinite alternate;
+        
+    }
+    
+    .menu-icon:hover span:last-child {
+        animation: elastic .2s ease-in-out .3s infinite alternate;
+    }
 }
 
 /* Rotate first bar */
