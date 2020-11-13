@@ -966,171 +966,6 @@ body {
     -webkit-transform: translate(-50%, -50%);
 }
 
-#testimonies .card {
-    width: 450px;
-    height: 250px;
-    background-color: #fff;
-    background: linear-gradient(#f8f8f8, #fff);
-    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
-    margin: 1.5rem;
-}
-
-#testimonies .card h1 {
-    text-align: center;
-}
-
-#testimonies .card .additional {
-    position: absolute;
-    width: 150px;
-    height: 100%;
-    background: linear-gradient(#dE685E, #EE786E);
-    transition: width 0.4s;
-    overflow: hidden;
-    z-index: 2;
-}
-
-#testimonies .card.green .additional {
-    background: linear-gradient(#92bCa6, #A2CCB6);
-}
-
-
-#testimonies .card:hover .additional {
-    width: 100%;
-    border-radius: 0 5px 5px 0;
-}
-
-#testimonies .card .additional .user-card {
-    width: 150px;
-    height: 100%;
-    position: relative;
-    float: left;
-}
-
-#testimonies .card .additional .user-card::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 10%;
-    right: -2px;
-    height: 80%;
-    border-left: 2px solid rgba(0, 0, 0, 0.025);
-    
-}
-
-#testimonies .card .additional .user-card .level,
-#testimonies .card .additional .user-card .points {
-    top: 15%;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 0.75em;
-    font-weight: bold;
-    background: rgba(0, 0, 0, 0.15);
-    padding: 0.125rem 0.75rem;
-    border-radius: 100px;
-    white-space: nowrap;
-}
-
-#testimonies .card .additional .user-card .points {
-    top: 85%;
-}
-
-#testimonies .card .additional .user-card svg {
-    top: 50%;
-}
-
-#testimonies .card .additional .more-info {
-    width: 300px;
-    float: left;
-    position: absolute;
-    left: 150px;
-    height: 100%;
-}
-
-#testimonies .card .additional .more-info h1 {
-    color: #fff;
-    margin-bottom: 0;
-}
-
-#testimonies .card.green .additional .more-info h1 {
-    color: #224C36;
-}
-
-#testimonies .card .additional .coords {
-    margin: 0 1rem;
-    color: #fff;
-    font-size: 1rem;
-}
-
-#testimonies .card.green .additional .coords {
-    color: #325C46;
-}
-
-#testimonies .card .additional .coords span+span {
-    float: right;
-}
-
-#testimonies .card .additional .stats {
-    font-size: 2rem;
-    display: flex;
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    top: auto;
-    color: #fff;
-}
-
-#testimonies .card.green .additional .stats {
-    color: #325C46;
-}
-
-#testimonies .card .additional .stats>div {
-    flex: 1;
-    text-align: center;
-}
-
-#testimonies .card .additional .stats i {
-    display: block;
-}
-
-#testimonies .card .additional .stats div.title {
-    font-size: 0.75rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-#testimonies .card .additional .stats div.value {
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 1.5rem;
-}
-
-#testimonies .card .additional .stats div.value.infinity {
-    font-size: 2.5rem;
-}
-
-#testimonies .card .general {
-    width: 300px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    box-sizing: border-box;
-    padding: 1rem;
-    padding-top: 0;
-}
-
-#testimonies .card .general .more {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    font-size: 0.9em;
-}
-
 /* ---- Testimonies carousel */
 
 * {
@@ -1179,11 +1014,8 @@ body {
     border-radius: 3px;
     
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.wrapper .box:hover {
-    z-index: 5;
-    transform: scale(1.2);
+    overflow: hidden;
+    transition: transform .4s ease-in-out;
 }
 
 .wrapper .box p{
@@ -1204,6 +1036,15 @@ body {
     align-items: center;
     justify-content: space-between;
     padding-top: 10px;
+}
+
+.box:hover {
+    cursor: pointer;
+    z-index: 5;
+    transform: scale(1.2);
+}
+.box:nth-child(2):hover{
+    transform: scale(1.2);
 }
 
 .box .info .name {
@@ -1231,6 +1072,7 @@ body {
 }
 
 .box .content .image {
+    position: relative;
     height: 75px;
     width: 75px;
     padding: 3px;
@@ -1261,4 +1103,42 @@ body {
     .wrapper .box {
         width: 100%;
     }
+}
+
+.bubble.bubble1:before{
+    background-image: url('../images/bg.jpg') !important;
+}
+.bubble.bubble2:before{
+    background-image: url('../images/bg2.jpg') !important;
+}
+.bubble.bubble3:before{
+    background-image: url('../images/bg3.jpg') !important;
+}
+
+.bubble:before {
+    position: absolute;
+    background-color: #D4D37F;
+    background-image: url('https://adjemin.com/img/smartlivraison.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    /*   opacity:0.5;  */
+    content: '';
+    width: 0rem;
+    height: 0rem;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    transition: all .5s ease-in-out;
+    z-index: -1;
+}
+
+.bubble:hover::before {
+    position: absolute;
+    width: 950px;
+    height: 950px;
+
+    bottom: -227.5px;
+    z-index: 3;
 }
