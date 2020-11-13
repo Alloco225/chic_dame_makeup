@@ -1043,9 +1043,10 @@ body {
     z-index: 5;
     transform: scale(1.2);
 }
-/* .box:nth-child(2):hover{
+.box:nth-child(2):hover{
     transform: scale(1.2);
-} */
+    z-index: 10;
+}
 
 .box .info .name {
     font-weight: 700;
