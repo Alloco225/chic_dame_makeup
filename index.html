@@ -9,11 +9,12 @@
     <title>Chic Dame Make up</title>
     <meta name="author" content="Amane Hosanna">
     <meta name="description"
-        content="Confiez vous aux mains qui sauront apporter un plus à votre beauté en vous donnant l’élégance qui vous démarquera parmi tant d’autre. Chez chic dame la beauté à moindre">
+        content="Confiez-vous aux mains qui sauront apporter un plus à votre beauté en vous donnant l’élégance qui vous démarquera parmi tant d’autre. Chez chic dame la beauté à moindre">
 
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link rel="stylesheet" href="css/utilities.css"> -->
     <link rel="stylesheet" href="css/welcome.css">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
@@ -136,7 +137,7 @@
     </div> -->
 
     <main class="parallax">
-        <div id="group1" class="parallax__group">
+        <div id="showcase" class="parallax__group">
             <div class="parallax__layer parallax__layer--base">
                 <!-- <div class="title">Base Layer</div> -->
                 <!-- <div class="title">Welcome</div> -->
@@ -151,20 +152,26 @@
         </div>
         <div id="group2" class="parallax__group">
             <div class="parallax__layer parallax__layer--base">
-                <div class="title">
-                    <h2>
-                        Chic Dame Makeup
-                    </h2>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis repudiandae modi iure nisi quaerat laudantium voluptatum. Sequi cum error id, quo necessitatibus perspiciatis sunt quibusdam enim ducimus placeat, magni nemo.
-                    </p>
-                </div>
+                <h2 class="title top-title">
+                    Chic Dame Makeup
+                </h2>
+
                 <a href="#services" class="scroll-down goto">
                     <i class="material-icons">keyboard_arrow_down</i>
                 </a>
             </div>
             <div class="parallax__layer parallax__layer--back">
                 <!-- <div class="title">Background Layer</div> -->
+                <div class="title">
+                    <p>
+                        Confiez-vous aux mains qui sauront apporter un plus à votre beauté en vous donnant l’élégance
+                        qui vous démarquera parmi tant d’autre.
+                    </p>
+                    <br>
+                    <p>
+                        Chez chic dame la beauté à moindre.
+                    </p>
+                </div>
             </div>
         </div>
         <div id="services" class="parallax__group">
@@ -234,22 +241,79 @@
 
             </div>
         </div>
-        <div id="group4" class="parallax__group services">
+        <section id="shop" class="parallax__group services">
             <div class="parallax__layer parallax__layer--base">
-                <div class="title">Ce que je fais</div>
                 <!-- <div class="title">Base Layer</div> -->
-            </div>
-            <div class="parallax__layer parallax__layer--back">
-                <div class="title">// TODO : stop being lazy n do this page</div>
-            </div>
-            <div class="parallax__layer parallax__layer--deep">
-                <div class="title">// this section too </div>
-                <div>
+                
+                
+            
+
+                <div class="wrapper-shop-items">
+                    <div class="row">
+                        <div class="container slider">
+                            <div class="box slide-item">
+                                <div class="imgBx">
+                                    <img src="images/img1.jpg" alt="" />
+                                </div>
+                                <div class="layer layer1 slide"></div>
+                                <div class="layer layer2 slide"></div>
+                                <div class="contentBx">
+                                    <img src="images/img2.jpg" alt="" />
+                                </div>
+                            </div>
+                            <div class="box slide-item">
+                                <div class="imgBx">
+                                    <img src="images/img2.jpg" alt="" />
+                                </div>
+                                <div class="layer layer1 slide"></div>
+                                <div class="layer layer2 slide"></div>
+                                <div class="contentBx">
+                                    <img src="images/img3.jpg" alt="" />
+                                </div>
+                            </div>
+                            <div class="box slide-item">
+                                <div class="imgBx">
+                                    <img src="images/img3.jpg" alt="" />
+                                </div>
+                                <div class="layer layer1 slide"></div>
+                                <div class="layer layer2 slide"></div>
+                                <div class="contentBx">
+                                    <img src="images/img3.jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Decorations -->
+                    <div class="bottom-row">
+
+                        <a href="" class="goto button action_link">
+                            <button class="btn btn-rose">
+                                Visiter la boutique
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="testimonies" class="parallax__group">
+            <div class="parallax__layer parallax__layer--back">
+                <div class="content">
+                    <p>
+                        Accessoires et Produits de beauté
+                    </p>
+                    <p class="d-none">
+                        - Manicure - Pédicure - Soins du visage -
+                    </p>
+                    <br>
+                    <!-- // this one is for decoration art -->
+                    
+                </div>
+                
+            </div>
+            <div class="parallax__layer parallax__layer--deep">
+                <h2 class="title top-title">Articles de beauté</h2>
+
+            </div>
+        </section>
+        <section id="testimonies" class="parallax__group">
             <div class="parallax__layer parallax__layer--fore">
                 <!-- Foreground -->
                 <div class="wrapper">
@@ -323,18 +387,17 @@
                 <h2 class="title top-title">Ce que mes clientes disent</h2>
 
                 <!-- <div class="title">Base Layer</div> -->
-                
             </div>
-        </div>
-        <div id="group6" class="parallax__group">
+        </section>
+        <section id="reservation" class="parallax__group">
             <div class="parallax__layer parallax__layer--back">
-                <div class="title">// Im so lazyyy</div>
+                <h2 class="title top-title">Réservation</h2>
             </div>
             <div class="parallax__layer parallax__layer--base">
                 <div class="title">But im progressing steadily</div>
             </div>
-        </div>
-        <div id="group7" class="parallax__group">
+        </section>
+        <footer id="footer" class="parallax__group">
             <div class="parallax__layer parallax__layer--base">
                 <!-- <div class="title">Base Layer</div> -->
                 <div class="title">
@@ -356,7 +419,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     </main>
     <nav class="navbar">
         <div>
@@ -381,9 +444,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#group4" class="nav-link goto button">
+                    <a href="#shop" class="nav-link goto button">
                         <button>
-                            Mes Travaux
+                            Boutique
                         </button>
                     </a>
                 </li>
@@ -395,14 +458,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#group6" class="nav-link goto button">
+                    <a href="#reservation" class="nav-link goto button">
                         <button>
                             Me Contacter
                         </button>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#group7" class="nav-link goto button">
+                    <a href="#footer" class="nav-link goto button">
                         <button>
                             Crédits
                         </button>
@@ -415,7 +478,7 @@
             </div>
         </div>
     </nav>
-
+    <a id="" class=""></a>
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <!-- <script src="js/sparkle-btn.js"></script> -->
@@ -425,6 +488,7 @@
 
     <!-- Lips animation -->
     <script src="js/animations.js"></script>
+    <script src="js/slider.js"></script>
 
     <script>
         animateLoadingIcon();
@@ -525,7 +589,7 @@
                 setTimeout(function () {
                     $(".scroll-down").css('opacity', 1);
                 }, 2000);
-            }, 5000);
+            }, 000);
 
             $(".menu-icon").click();
 
@@ -536,7 +600,7 @@
             });
 
             // hover makeup after
-            $(".wrapper .box").hover(function(){
+            $(".wrapper .box").hover(function () {
                 $(this).toggleClass("box-hover");
             });
             //$(".wrapper .box").mouseenter(function(){
@@ -545,29 +609,30 @@
             //$(".wrapper .box").click(function(){
             //    $(this).removeClass("box-hover");
             //});
-            $(".bubble").mouseenter(function(){
+            $(".bubble").mouseenter(function () {
                 $(this).addClass("bubble-mouseenter");
                 //setTimeout(()=>{
-                  //  $(this).addClass("bubble-resize");
+                //  $(this).addClass("bubble-resize");
                 //}, 300);
-                setTimeout(()=>{
+                setTimeout(() => {
                     $(this).addClass("bubble-resize");
                 }, 450);
-                setInterval(()=>{
+                setInterval(() => {
                     $(this).click();
                 });
             });
-            
-            //$(".bubble").mouseleave(function(){
-            $(".bubble").click(()=>{
+
+            $(".bubble").mouseleave(function () {
+                //$(".bubble").click(()=>{
                 $(this).removeClass("bubble-resize");
                 //setTimeout(()=>{
                 //    $(this).removeClass("bubble-resize");
                 //}, 300);
-                setTimeout(()=>{
+                setTimeout(() => {
                     $(this).removeClass("bubble-mouseenter");
                 }, 450);
             });
+
             
 
             function toggleNavbar() {
@@ -620,13 +685,13 @@
                 e.preventDefault();
                 var t = 200;
                 $btn = $(this);
-                setTimeout(function(){
+                setTimeout(function () {
                     if ($(".navbar").css("left") != "-250px") {
                         // $(".menu-icon").click();
                         toggleNavbar();
                         t = 500
                     }
-                    
+
                     setTimeout(function () {
                         document.querySelector($btn.attr('href')).scrollIntoView({
                             behavior: 'smooth'
@@ -650,6 +715,7 @@
             */
         });
     </script>
+    
     <!--  -->
 
 </body>

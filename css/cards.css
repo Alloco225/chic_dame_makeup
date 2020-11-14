@@ -175,12 +175,6 @@
 
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-html,
-body {
-    background: #FCEEB5;
-    font-family: Abel, Arial, Verdana, sans-serif;
-}
-
 
 .wrapper {
     position: absolute;
