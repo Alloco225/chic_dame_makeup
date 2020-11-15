@@ -199,6 +199,7 @@ a {
 
 .floating-btn{
     position: absolute;
+    z-index: 999;
     bottom: 50px;
     right: 50px;
     width: 75px;
