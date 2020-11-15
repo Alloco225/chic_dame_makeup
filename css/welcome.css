@@ -2,6 +2,7 @@
     --primary: #fd0057;
     --blue: #0da1b1;
     --red: #df2321;
+    --primary-dark: var(--red);
     --green: #338033;
 }
 
@@ -207,12 +208,19 @@ a {
     border-radius: 50%;
     background: var(--primary);
     color: #fff;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 
     box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
     transition: all .3s ease-in-out;
     /* overflow: hidden; */
 }
 .floating-btn:hover{
+    /* color: var(--primary); */
     transform: scale(1.08);
     box-shadow: none;
 }
@@ -222,19 +230,14 @@ a {
     opacity: 0 !important;
 }
 
-.fab{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.fab i{
+.floating-btn i{
     font-size: 40px !important;
 
 }
 
-.fab:before, .fa:after {
+.floating-btn::before, .fa:after {
     position: absolute;
-    opacity: .4;
+    opacity: 1;
     content: '';
     width: 0rem;
     height: 0rem;
@@ -242,29 +245,45 @@ a {
     bottom: 50%;
     transform: translate(-50%);
     border-radius: 50%;
+    border: 5px black;
     /* z-index: -3; */
 }
-.fab::before{
-    background-color: #fff;
+.floating-btn::before{
+    background-color: var(--primary-dark);
     transition: all .5s ease-in-out;
-    /* transition: all .5s ease-in-out; */
 }
-.fab::after{
+
+/* .floating-btn::after{
     z-index: 3;
     background-color: var(--blue);
     transition-delay: .3s;
+} */
+
+@keyframes hover-ripples {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -3;
+
+    }
 }
+/* .floating-btn:hover::before, */
 
-
-/* .fab:hover::before, */
-
-.fab:hover::before, .fab:hover::after {
+.floating-btn:hover::before, .floating-btn:hover::after {
     /* position: absolute; */
     width: 110%;
     height: 110%;
     bottom: 0px;
-    opacity: 1;
+    /* opacity: 1; */
+    z-index: -3;
     transition: all .3s ease-in-out;
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+    /* animation: hover-ripples .6s ease-in-out */
 }
 
 .navbar {
@@ -1242,8 +1261,8 @@ span.ripple {
 
 .wrapper .box {
     background: #fff;
-    /* width: calc(33% - 10px); */
-    width: 320px !important;
+    width: calc(33% - 10px);
+    /* width: 320px !important; */
     /* width: calc(33% - 10px); */
     padding: 25px;
     border-radius: 3px;
@@ -1275,14 +1294,14 @@ span.ripple {
 
 .box-hover {
     cursor: pointer;
-    z-index: 5;
+    /* z-index: 5; */
     transform: scale(1.2);
 }
 
 .box-hover,
 #testimonies .box:nth-child(2):hover {
     transform: scale(1.2);
-    z-index: 10;
+    /* z-index: 10; */
 }
 
 .box .info .name {
@@ -1389,7 +1408,7 @@ span.ripple {
     width: 950px;
     height: 950px;
     bottom: -227.5px;
-    z-index: 3;
+    /* z-index: 3; */
     transition: all .3s ease-in-out;
 
 }
