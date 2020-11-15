@@ -1,0 +1,68 @@
+/* ----
+* Media Queries 
+* Contains the site responsiveness
+
+*/
+
+/* ** Phones */
+/* *** Phone Small */
+@media (max-width:320px){
+    
+}
+/* *** Phone Medium */
+@media (max-width:375px){
+
+}
+/* *** Phone Large */
+@media (max-width:425px){
+
+}
+    /* ** Tables */
+    /* *** Tablet Small */
+@media (max-width:768px){
+
+}
+/* *** Tablet Medium */
+/* *** Tablet Large */
+        
+        /* ** Desktops */
+/* *** Desktop Small */
+@media (max-width:1024px){
+    
+}
+        /* *** Desktop Medium */
+@media (max-width:1440px){
+
+}
+        /* *** Desktop Large */
+@media (max-width:2560px){
+
+}
+
+/* *********** */
+
+/* ** Phones */
+/* *** Phone Small */
+@media (min-width:320px) {}
+
+/* *** Phone Medium */
+
+/* *** Phone Large */
+@media (min-width:425px) {}
+
+/* ** Tables */
+/* *** Tablet Small */
+@media (min-width:768px) {}
+
+/* *** Tablet Medium */
+/* *** Tablet Large */
+
+/* ** Desktops */
+/* *** Desktop Small */
+@media (min-width:1024px) {}
+
+/* *** Desktop Medium */
+@media (min-width:1440px) {}
+
+/* *** Desktop Large */
+@media (min-width:2560px) {}
