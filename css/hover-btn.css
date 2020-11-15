@@ -43,6 +43,11 @@ button {
     transition: 0.6s;
     overflow: hidden;
 }
+button.btn {
+    width: auto;
+    max-width: 230px !important;
+
+}
 
 button:focus {
     outline: 0;

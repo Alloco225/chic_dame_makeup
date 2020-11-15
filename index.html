@@ -14,12 +14,12 @@
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- <link rel="stylesheet" href="css/utilities.css"> -->
-    <link rel="stylesheet" href="css/welcome.css">
+    <link rel="stylesheet" href="css/utilities.css">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
-    <!-- <link rel="stylesheet" href="css/sparkle-btn.css"> -->
+    <link rel="stylesheet" href="css/responsiveness.css">
     <link rel="stylesheet" href="css/hover-btn.css">
+    <link rel="stylesheet" href="css/welcome.css">
     <!-- <link rel="stylesheet" href="css/cards.css"> -->
 
     <!-- Svg animation -->
@@ -244,10 +244,6 @@
         <section id="shop" class="parallax__group services">
             <div class="parallax__layer parallax__layer--base">
                 <!-- <div class="title">Base Layer</div> -->
-                
-                
-            
-
                 <div class="wrapper-shop-items">
                     <div class="row">
                         <div class="container slider">
@@ -287,7 +283,7 @@
                     <div class="bottom-row">
 
                         <a href="" class="goto button action_link">
-                            <button class="btn btn-rose">
+                            <button class="btn btn-rose px-3">
                                 Visiter la boutique
                             </button>
                         </a>
@@ -304,9 +300,9 @@
                     </p>
                     <br>
                     <!-- // this one is for decoration art -->
-                    
+
                 </div>
-                
+
             </div>
             <div class="parallax__layer parallax__layer--deep">
                 <h2 class="title top-title">Articles de beauté</h2>
@@ -478,7 +474,9 @@
             </div>
         </div>
     </nav>
-    <a id="" class=""></a>
+    <a id="book_now" class="floating-btn fab">
+        <i class="material-icons">store</i>
+    </a>
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <!-- <script src="js/sparkle-btn.js"></script> -->
@@ -487,8 +485,10 @@
     <script src="js/wow.min.js"></script>
 
     <!-- Lips animation -->
+    <script src="js/utils.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/script.js"></script>
 
     <script>
         animateLoadingIcon();
@@ -633,7 +633,10 @@
                 }, 450);
             });
 
-            
+            $(window).scroll(function () {
+                console.log("vv");
+                
+            });
 
             function toggleNavbar() {
                 $(".menu-icon").toggleClass("menu-active");
@@ -715,7 +718,7 @@
             */
         });
     </script>
-    
+
     <!--  -->
 
 </body>

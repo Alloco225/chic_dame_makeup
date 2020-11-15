@@ -197,6 +197,75 @@ a {
     }
 }
 
+.floating-btn{
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition: all .3s ease-in-out;
+    /* overflow: hidden; */
+}
+.floating-btn:hover{
+    transform: scale(1.08);
+    box-shadow: none;
+}
+
+.floating-btn.remove{
+    right: -100px !important;
+    opacity: 0 !important;
+}
+
+.fab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fab i{
+    font-size: 40px !important;
+
+}
+
+.fab:before, .fa:after {
+    position: absolute;
+    opacity: .4;
+    content: '';
+    width: 0rem;
+    height: 0rem;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    /* z-index: -3; */
+}
+.fab::before{
+    background-color: #fff;
+    transition: all .5s ease-in-out;
+    /* transition: all .5s ease-in-out; */
+}
+.fab::after{
+    z-index: 3;
+    background-color: var(--blue);
+    transition-delay: .3s;
+}
+
+
+/* .fab:hover::before, */
+
+.fab:hover::before, .fab:hover::after {
+    /* position: absolute; */
+    width: 110%;
+    height: 110%;
+    bottom: 0px;
+    opacity: 1;
+    transition: all .3s ease-in-out;
+}
+
 .navbar {
     position: absolute;
     /* left: 0; */
