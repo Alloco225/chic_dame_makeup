@@ -3,6 +3,14 @@
 * Contains the site responsiveness
 
 */
+:root{
+        --xs : 320px;
+        --sm : 375px;
+        --s : 425px;
+        --md : 768px;
+        --lg: 1024px;
+        --lg: 1440px;
+}
 
 /* ** Phones */
 /* *** Phone Small */

@@ -4,6 +4,13 @@
     --red: #df2321;
     --primary-dark: var(--red);
     --green: #338033;
+
+    --xs : 320px;
+    --sm : 375px;
+    --md : 425px;
+    --lg : 768px;
+    --xl: 1024px;
+    --xxl: 1440px;
 }
 
 /* Parallax base styles
@@ -805,6 +812,189 @@ main {
 #reservation .parallax__layer--back {
     background: rgb(245, 235, 100);
 }
+
+#reservation .content{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+    width: 100%;
+}
+
+#reservation .wrapper {
+    width: 100%;
+    display: flex;
+}
+@media (max-width: 475px){
+    #reservation .wrapper {
+        flex-wrap: wrap;
+    }
+    #reservation .content .card {
+        width: 100%;
+    }
+}
+
+#reservation .content .card {
+    width: calc(33% -10px);
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+#reservation .content .card.contact-card {
+    background: #22222F;
+    /* background: #858e99; */
+
+}
+
+.contact-calendar{
+    background-color: #fff;
+    padding-top: 50px;
+}
+/* @media (max-screen: )
+
+.card.contact-calendar{
+    background: #eee;
+}
+ */
+
+
+
+/* Form design */
+/* form starting stylings ------------------------------- */
+.material-form {}
+
+.group {
+    position: relative;
+    margin: 30px auto;
+}
+
+.material-form input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #757575;
+    /* border-bottom: 1px solid #fff; */
+    background: transparent;
+}
+
+.material-form input:focus {
+    outline: none;
+}
+
+/* LABEL ======================================= */
+.material-form label {
+    /* color: #999; */
+    color: var(--blue);
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    pointer-events: none;
+
+    left: 5px;
+    top: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+.material-form input:focus~label,
+.material-form input:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: var(--primary);
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+    position: relative;
+    display: block;
+    width: 300px;
+}
+
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: var(--primary);
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+/* active state */
+.material-form input:focus~.bar:before,
+.material-form input:focus~.bar:after {
+    width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* active state */
+.material-form input:focus~.highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: var(--primary);
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: var(--primary);
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: var(--primary);
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+
 
 #footer {
     z-index: 3;
